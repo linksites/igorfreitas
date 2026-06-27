@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Logo from "./Logo";
 
 const links = [
   { label: "Serviços", href: "#atuacao" },
@@ -42,14 +43,7 @@ export default function Nav() {
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           style={{ background: "none", border: "none", cursor: "pointer", textAlign: "left", display: "flex", alignItems: "center", gap: 12 }}
         >
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src="/logo.svg"
-            alt="Igor Freitas"
-            width={31}
-            height={36}
-            style={{ display: "block", height: 36, width: "auto" }}
-          />
+          <Logo height={36} />
           <div>
             <p
               style={{
