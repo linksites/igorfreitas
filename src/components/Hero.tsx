@@ -19,9 +19,27 @@ export default function Hero() {
       ref={ref}
       id="topo"
       className="flex flex-col justify-center min-h-screen"
-      style={{ paddingTop: 100, paddingBottom: 80 }}
+      style={{ paddingTop: 100, paddingBottom: 80, position: "relative", overflow: "hidden" }}
     >
-      <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 40px", width: "100%" }}>
+      {/* Glow prateado radial */}
+      <div
+        aria-hidden="true"
+        style={{
+          position: "absolute",
+          top: "50%",
+          left: "50%",
+          transform: "translate(-50%, -60%)",
+          width: "70vw",
+          height: "70vw",
+          maxWidth: 900,
+          maxHeight: 900,
+          borderRadius: "50%",
+          background: "radial-gradient(ellipse at center, rgba(200,200,200,0.11) 0%, rgba(200,200,200,0.04) 45%, transparent 70%)",
+          pointerEvents: "none",
+        }}
+      />
+
+      <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 40px", width: "100%", position: "relative" }}>
 
         <p
           className="hero-el"
