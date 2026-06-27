@@ -40,32 +40,42 @@ export default function Nav() {
         {/* Logo */}
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          style={{ background: "none", border: "none", cursor: "pointer", textAlign: "left" }}
+          style={{ background: "none", border: "none", cursor: "pointer", textAlign: "left", display: "flex", alignItems: "center", gap: 12 }}
         >
-          <p
-            style={{
-              fontFamily: "var(--font-montserrat)",
-              fontWeight: 700,
-              fontSize: "1rem",
-              color: "var(--text)",
-              letterSpacing: "0.04em",
-              lineHeight: 1.2,
-            }}
-          >
-            IGOR FREITAS
-          </p>
-          <p
-            style={{
-              fontFamily: "var(--font-inter)",
-              fontWeight: 300,
-              fontSize: "0.6rem",
-              color: "var(--text-muted)",
-              letterSpacing: "0.16em",
-              textTransform: "uppercase",
-            }}
-          >
-            Advocacia & Consultoria
-          </p>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/logo.svg"
+            alt="Igor Freitas"
+            width={31}
+            height={36}
+            style={{ display: "block", height: 36, width: "auto" }}
+          />
+          <div>
+            <p
+              style={{
+                fontFamily: "var(--font-montserrat)",
+                fontWeight: 700,
+                fontSize: "1rem",
+                color: "var(--text)",
+                letterSpacing: "0.04em",
+                lineHeight: 1.2,
+              }}
+            >
+              IGOR FREITAS
+            </p>
+            <p
+              style={{
+                fontFamily: "var(--font-inter)",
+                fontWeight: 300,
+                fontSize: "0.6rem",
+                color: "var(--text-muted)",
+                letterSpacing: "0.16em",
+                textTransform: "uppercase",
+              }}
+            >
+              Advocacia & Consultoria
+            </p>
+          </div>
         </button>
 
         {/* Desktop nav */}

@@ -10,16 +10,27 @@ export default function Footer() {
       }}
     >
       <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 40px", display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "space-between", gap: 12, borderBottom: "1px solid var(--border)", paddingBottom: 20, marginBottom: 16 }}>
-        <p
-          style={{
-            fontFamily: "var(--font-inter)",
-            fontWeight: 300,
-            fontSize: "0.75rem",
-            color: "var(--text-muted)",
-          }}
-        >
-          © {new Date().getFullYear()} Igor Freitas Advocacia & Consultoria Jurídica — OAB/PA 36238
-        </p>
+        <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/logo.svg"
+            alt=""
+            aria-hidden="true"
+            width={22}
+            height={26}
+            style={{ display: "block", height: 26, width: "auto", opacity: 0.5 }}
+          />
+          <p
+            style={{
+              fontFamily: "var(--font-inter)",
+              fontWeight: 300,
+              fontSize: "0.75rem",
+              color: "var(--text-muted)",
+            }}
+          >
+            © {new Date().getFullYear()} Igor Freitas Advocacia & Consultoria Jurídica — OAB/PA 36238
+          </p>
+        </div>
 
         <div className="flex items-center gap-6">
           {[
