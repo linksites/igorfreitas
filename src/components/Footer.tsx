@@ -9,7 +9,7 @@ export default function Footer() {
         background: "var(--surface)",
       }}
     >
-      <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 40px", display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "space-between", gap: 12 }}>
+      <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 40px", display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "space-between", gap: 12, borderBottom: "1px solid var(--border)", paddingBottom: 20, marginBottom: 16 }}>
         <p
           style={{
             fontFamily: "var(--font-inter)",
@@ -62,6 +62,24 @@ export default function Footer() {
             Voltar ao topo ↑
           </button>
         </div>
+      </div>
+
+      <div
+        style={{
+          maxWidth: 1200,
+          margin: "0 auto",
+          padding: "0 40px",
+          textAlign: "center",
+          fontFamily: "var(--font-inter)",
+          fontWeight: 300,
+          fontSize: "0.65rem",
+          letterSpacing: "0.16em",
+          textTransform: "uppercase",
+          color: "var(--text-muted)",
+          opacity: 0.5,
+        }}
+      >
+        Desenvolvido por <span style={{ color: "var(--silver)", opacity: 1 }}>TECHLAB</span>
       </div>
     </footer>
   );
