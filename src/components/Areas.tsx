@@ -3,52 +3,33 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { LuBriefcase, LuShield, LuScale, LuCar, LuScrollText } from "react-icons/lu";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const areas = [
   {
-    icon: (
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/>
-      </svg>
-    ),
+    icon: LuBriefcase,
     title: "Direito do Trabalho",
     desc: "Reclamações trabalhistas, verbas rescisórias, horas extras, assédio e acordos. Defesa para empregados e empregadores.",
   },
   {
-    icon: (
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-      </svg>
-    ),
+    icon: LuShield,
     title: "Direito Previdenciário",
     desc: "Benefícios do INSS, revisões, aposentadorias, BPC/LOAS e ações judiciais com análise técnica.",
   },
   {
-    icon: (
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-      </svg>
-    ),
+    icon: LuScale,
     title: "Direito Penal",
     desc: "Defesa em inquéritos e processos criminais, habeas corpus, audiências de custódia e medidas cautelares.",
   },
   {
-    icon: (
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/>
-      </svg>
-    ),
+    icon: LuCar,
     title: "Trânsito",
     desc: "Defesas e recursos de multas, suspensão e cassação de CNH, acidentes e indenizações.",
   },
   {
-    icon: (
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/>
-      </svg>
-    ),
+    icon: LuScrollText,
     title: "Direito Civil",
     desc: "Contratos, responsabilidade civil, cobranças, locação, consumidor e mediação de conflitos.",
   },
@@ -75,7 +56,6 @@ export default function Areas() {
     >
       <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 40px" }}>
 
-        {/* Section heading */}
         <div className="areas-heading text-center mb-12">
           <h2
             style={{
@@ -100,11 +80,10 @@ export default function Areas() {
           </p>
         </div>
 
-        {/* Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {areas.map((area) => (
+          {areas.map(({ icon: Icon, title, desc }) => (
             <div
-              key={area.title}
+              key={title}
               className="area-card"
               style={{
                 background: "var(--bg)",
@@ -117,7 +96,7 @@ export default function Areas() {
               onMouseLeave={(e) => (e.currentTarget.style.borderColor = "var(--border)")}
             >
               <div style={{ color: "var(--silver)", marginBottom: "1rem" }}>
-                {area.icon}
+                <Icon size={28} strokeWidth={1.5} />
               </div>
               <h3
                 style={{
@@ -129,7 +108,7 @@ export default function Areas() {
                   lineHeight: 1.3,
                 }}
               >
-                {area.title}
+                {title}
               </h3>
               <p
                 style={{
@@ -140,7 +119,7 @@ export default function Areas() {
                   lineHeight: 1.7,
                 }}
               >
-                {area.desc}
+                {desc}
               </p>
             </div>
           ))}
