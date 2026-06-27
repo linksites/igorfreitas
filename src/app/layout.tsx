@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Montserrat, Inter } from "next/font/google";
 import "./globals.css";
 import SmoothScroll from "@/components/SmoothScroll";
+import GrainOverlay from "@/components/GrainOverlay";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -29,6 +30,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" className={`${montserrat.variable} ${inter.variable}`}>
       <body>
+        <GrainOverlay />
         <SmoothScroll>{children}</SmoothScroll>
       </body>
     </html>

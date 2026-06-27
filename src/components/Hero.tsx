@@ -21,17 +21,6 @@ export default function Hero() {
       className="flex flex-col justify-center min-h-screen"
       style={{ paddingTop: 100, paddingBottom: 80, position: "relative", overflow: "hidden" }}
     >
-      {/* Grid de linhas finas */}
-      <div
-        aria-hidden="true"
-        style={{
-          position: "absolute",
-          inset: 0,
-          backgroundImage: "repeating-linear-gradient(0deg, transparent, transparent 79px, rgba(255,255,255,0.10) 80px)",
-          pointerEvents: "none",
-        }}
-      />
-
       {/* Glow prateado radial */}
       <div
         aria-hidden="true"
