@@ -22,7 +22,7 @@ export default function Footer() {
               color: "var(--text-muted)",
             }}
           >
-            © {new Date().getFullYear()} Igor Freitas Advocacia & Consultoria Jurídica — OAB/PA 36238
+            © {new Date().getFullYear()} Igor Freitas Advocacia & Consultoria Jurídica
           </p>
         </div>
 

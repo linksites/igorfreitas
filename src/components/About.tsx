@@ -162,7 +162,7 @@ export default function About() {
                   letterSpacing: "0.06em",
                 }}
               >
-                OAB/PA 36238 — Situação regular
+                Situação regular
               </p>
             </div>
 

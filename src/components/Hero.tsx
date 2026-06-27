@@ -53,7 +53,7 @@ export default function Hero() {
             marginBottom: "1.5rem",
           }}
         >
-          OAB/PA 36238 — Belém, PA · Atendimento online em todo o Brasil
+          Belém, PA · Atendimento online em todo o Brasil
         </p>
 
         <h1
@@ -145,7 +145,7 @@ export default function Hero() {
         </div>
 
         <div className="hero-el" style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
-          {["OAB/PA 36238", "Situação Regular", "Contratos digitais", "Reunião por vídeo"].map((item) => (
+          {["Situação Regular", "Contratos digitais", "Reunião por vídeo"].map((item) => (
             <span
               key={item}
               style={{
